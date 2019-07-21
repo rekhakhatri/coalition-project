@@ -10,6 +10,8 @@
 
     <title>{{ config('app.name', 'Coalition Project') }}</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
@@ -18,11 +20,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
                     @yield('content')
-                </div>
-            </div>
         </div>
     </div>
 

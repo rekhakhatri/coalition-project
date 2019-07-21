@@ -15,7 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', function() {
 
-    return view('admin.post.create');
-});
+
+Route::get('add-product',[
+    'uses' =>  'ProductController@showProduct',
+    'as' => 'show.product'
+]);
+
+Route::post('add-product',[
+    'uses' =>  'ProductController@addProduct',
+    'as' => 'add.product'
+]);
